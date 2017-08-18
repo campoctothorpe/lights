@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #eee;
+  background-color: #555;
+  text-shadow: 0px 1px #000;
+}
+
+.row {
+  clear: both;
+}
+
+.col {
+  float: left;
+  margin-left: 20px;
+  width: 60px;
+}
+
+.toggle {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  margin: 20px 1em;
+  background: #fcfff4;
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.toggle label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  background: linear-gradient(top, #222 0%, #45484d 100%);
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+
+.toggle label:after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #27ae60;
+  background: linear-gradient(top, #27ae60 0%, #145b32 100%);
+  opacity: 0;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.toggle label::after {
+  opacity: 0.3;
+}
+
+.toggle input {
+  visibility: hidden;
+}
+
+.toggle input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+.toggle.green label:after {
+  background: #27ae60;
+  background: linear-gradient(top, #27ae60 0%, #145b32 100%);
+}
+
+.toggle.red label:after {
+  background: #c0392b;
+  background: linear-gradient(top, #c0392b 0%, #6d2018 100%);
+}
+
+.toggle.blue label:after {
+  background: #2b2bc0;
+  background: linear-gradient(top, #2b2bc0 0%, #18186d 100%);
+}
+
+.toggle.white label:after {
+  background: #e0e0e0;
+  background: linear-gradient(to bottom, #e0e0e0 0%, #adadad 100%);
+}
+
+.toggle.black label:after {
+  background: #000000;
+  background: linear-gradient(to bottom, #000000 0%, #000000 100%);
+}
